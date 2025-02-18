@@ -3,6 +3,8 @@ import { RouterOutlet } from '@angular/router';
 
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { ListMoviesComponent } from './list-movies/list-movies.component';
+import { Movie } from './movie.model';
+//import { MovieDetailComponent } from '../movie-detail/movie-detail.component';
 
 @Component({
   selector: 'app-root',
@@ -12,5 +14,11 @@ import { ListMoviesComponent } from './list-movies/list-movies.component';
 })
 export class AppComponent {
   title = 'movie-list';
+
+  public mySelectedMovie! : Movie;
+
+  setSelectedMovie(movie:Movie){
+    this.mySelectedMovie=movie;
+  }
 
 }
